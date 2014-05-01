@@ -3,7 +3,7 @@ statusLAN
 
 Very simple webpage showing CPU usage of connected hosts.
 
-https://github.com/mjamroz/statusLAN/raw/master/screenshot.png
+![Screen](https://github.com/mjamroz/statusLAN/raw/master/screenshot.png)
 
 How To "install"
 ================
