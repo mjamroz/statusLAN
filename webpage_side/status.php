@@ -15,7 +15,7 @@
 $f_contents = file("quotes.html");
 $quote = $f_contents[rand(0, count($f_contents) - 1)];
 $h = new SQLite3("status.dat");
-$h->busyTimeout(40);
+$h->busyTimeout(400000); // msecs
 
 $al = array("212.ip1","212.ip.2","212.ipipipi"); // CHANGE
 $allowed = false;

@@ -31,5 +31,5 @@ Scripts are public domain. Quotes for bottom frame were downloaded from http://a
 TODO
 ====
 
-Probably for many hosts we get problems with blocking sqlite (provisional hack in the current version is to use random delay for DB update.. huh.)
+Probably for many hosts we get problems with blocking sqlite (provisional hack in the current version is timeout for locking set to big val.)
 Could be nicer to store all pings, to plot nice historical hosts usages, but I'm lazy. 
