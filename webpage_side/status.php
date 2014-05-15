@@ -16,7 +16,17 @@ $f_contents = file("quotes.html");
 $quote = $f_contents[rand(0, count($f_contents) - 1)];
 $h = new SQLite3("status.dat");
 $h->busyTimeout(40);
-if ($_POST && (!strpos($_SERVER['REMOTE_ADDR'],'192.168.1') || !strpos($_SERVER['REMOTE_ADDR'],'212.87.3.12') )){ // not very secure - update status only from these ip's
+
+$al = array("212.ip1","212.ip.2","212.ipipipi"); // CHANGE
+$allowed = false;
+foreach ($al as &$v) {
+    if (substr_count($_SERVER['REMOTE_ADDR'],$v)!=0) 
+        $allowed = true;
+}
+
+
+if ($_POST && $allowed) {
+
     $info = $_POST['ping'];
     $cpus = $_POST['cpus'];
     $date = $_POST['date'];
